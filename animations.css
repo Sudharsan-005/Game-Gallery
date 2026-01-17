@@ -69,6 +69,14 @@
     animation: borderPulse 2s infinite alternate;
 }
 .nms{
-    --glow-color: #d2c188;
+    --glow-color: #e90404;
+    animation: borderPulse 2s infinite alternate;
+}
+.bf5{
+    --glow-color: #8abdf8;
+    animation: borderPulse 2s infinite alternate;
+}
+.aoe{
+    --glow-color: #ae3431;
     animation: borderPulse 2s infinite alternate;
 }

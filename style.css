@@ -133,6 +133,18 @@ html {
     transform: translateY(-50%);
 }
 
+.bookmarks a:nth-child(11) {
+    bottom: 8%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.bookmarks a:nth-child(12) {
+    top: 8%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
 .bookmarks a:hover {
     background: rgba(255, 255, 255, 0.2);
     border-color: rgba(255, 255, 255, 1);
@@ -167,6 +179,30 @@ html {
 }
 
 .bg-image.active {
+    opacity: 1;
+}
+
+/* Screenshot Tooltip */
+.screenshot-tooltip {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    color: rgb(206, 206, 206);
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 500;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+    z-index: 100;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.screenshot-tooltip.show {
     opacity: 1;
 }
 
@@ -301,6 +337,21 @@ html {
     color: #ffffff;
 }
 
+.bf5 {
+    backdrop-filter: blur(5px) brightness(0.45);
+    align-self: flex-end;
+    margin-bottom: 400px;
+    color: #ffffff;
+}
+
+.aoe {
+    backdrop-filter: blur(5px) brightness(0.45);
+    align-self: flex-end;
+    margin-bottom: 100px;
+    color: #ffffff;
+}
+
+
 /*GAME LOGO IMAGES*/
 
 .rdr2img {
@@ -370,6 +421,70 @@ html {
     display: block;
 }
 
+.bf5img {
+    width: 180%;
+    height: auto;
+    display: block;
+}
+
+.aoeimg {
+    width: 180%;
+    height: auto;
+    display: block;
+}
+
+/* VIDEO PLAYER CONTROLS */
+.video-player {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    opacity: 0;
+    transition: opacity 0.6s ease-in-out;
+}
+
+.video-player.active {
+    opacity: 1;
+}
+
+.video-player .video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.8);
+}
+
+.video-controls {
+    position: absolute;
+    bottom: 80px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+    z-index: 11;
+}
+
+.control-btn {
+    padding: 10px 20px;
+    background: rgba(0, 0, 0, 0.8);
+    border: 2px solid rgba(255, 255, 255, 0.6);
+    color: #fff;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+}
+
+.control-btn:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 1);
+}
+
 /* GAME STATS & TEXT */
 
 h2 {
@@ -394,7 +509,7 @@ h2 {
 
 @media (max-width: 768px) {
 
-    
+
     .game-section {
         justify-content: center;
     }
@@ -404,7 +519,7 @@ h2 {
         margin-right: 0;
     }
 
-    
+
     .intro-content h1 {
         font-size: 2rem;
         letter-spacing: 4px;
@@ -416,7 +531,7 @@ h2 {
         letter-spacing: 1px;
     }
 
-    
+
     .bookmarks a:nth-child(1) {
         top: 10%;
         left: 5%;
