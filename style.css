@@ -1,3 +1,5 @@
+/* GLOBAL STYLES */
+
 body,
 html {
     margin: 0;
@@ -11,19 +13,137 @@ html {
     scroll-behavior: smooth;
 }
 
-/* Container for each game section */
+/* GAME SECTION - GENERAL CONTAINER*/
+
 .game-section {
     position: relative;
     height: 100vh;
-    /* Each section takes full screen height */
     display: flex;
     align-items: center;
-    /* justify-content removed to allow distinct card positioning */
     overflow: hidden;
     scroll-snap-align: center;
 }
 
-/* Carousel Container */
+/* INTRO SECTION*/
+
+.intro-section {
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background-color: #000;
+}
+
+/* Title container - centered */
+.intro-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+    text-align: center;
+}
+
+.intro-content h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin: 0;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 10px;
+    font-family: 'Courier New', monospace;
+    margin-bottom: 500px;
+}
+
+/* Bookmarks/Navigation */
+.bookmarks {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+
+.bookmarks a {
+    position: absolute;
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 500;
+    padding: 10px 20px;
+    border: 2px solid rgba(255, 255, 255, 0.7);
+    background: rgba(0, 0, 0, 0.8);
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-family: 'Courier New', monospace;
+    white-space: nowrap;
+}
+
+/* Scattered positions for each button */
+.bookmarks a:nth-child(1) {
+    top: 8%;
+    left: 5%;
+}
+
+.bookmarks a:nth-child(2) {
+    top: 8%;
+    right: 5%;
+}
+
+.bookmarks a:nth-child(3) {
+    top: 25%;
+    left: 3%;
+}
+
+.bookmarks a:nth-child(4) {
+    top: 25%;
+    right: 3%;
+}
+
+.bookmarks a:nth-child(5) {
+    bottom: 25%;
+    left: 3%;
+}
+
+.bookmarks a:nth-child(6) {
+    bottom: 25%;
+    right: 3%;
+}
+
+.bookmarks a:nth-child(7) {
+    bottom: 8%;
+    left: 5%;
+}
+
+.bookmarks a:nth-child(8) {
+    bottom: 8%;
+    right: 5%;
+}
+
+.bookmarks a:nth-child(9) {
+    top: 50%;
+    left: 2%;
+    transform: translateY(-50%);
+}
+
+.bookmarks a:nth-child(10) {
+    top: 50%;
+    right: 2%;
+    transform: translateY(-50%);
+}
+
+.bookmarks a:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 1);
+}
+
+.bookmarks a:active {
+    transform: scale(1.02);
+}
+
+/* CAROUSEL & BACKGROUND IMAGES */
+
 .carousel-container {
     position: absolute;
     top: 0;
@@ -33,7 +153,6 @@ html {
     z-index: 0;
 }
 
-/* The Background Image */
 .bg-image {
     position: absolute;
     top: 0;
@@ -42,9 +161,7 @@ html {
     height: 100%;
     object-fit: cover;
     z-index: 0;
-    /* Keeps image behind text */
     filter: brightness(0.8);
-    /* Makes text easier to read */
     opacity: 0;
     transition: opacity 0.6s ease-in-out;
 }
@@ -53,7 +170,8 @@ html {
     opacity: 1;
 }
 
-/* Carousel Navigation Buttons */
+/*CAROUSEL NAVIGATION BUTTONS */
+
 .carousel-btn {
     position: absolute;
     bottom: 30px;
@@ -90,7 +208,8 @@ html {
     left: 80px;
 }
 
-/* The Content Card Base */
+/* INFO CARDS - BASE STYLES */
+
 .info-card {
     width: 30%;
     min-width: auto;
@@ -98,14 +217,11 @@ html {
     backdrop-filter: blur(10px);
     box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
     z-index: 1;
-    /* Ensure card is above image */
-
 }
 
 .info-card-right {
     margin-left: auto;
     margin-right: 5%;
-
 }
 
 .info-card-left {
@@ -113,17 +229,16 @@ html {
     margin-left: 5%;
 }
 
+/* GAME-SPECIFIC CARD STYLES*/
+
 .rdr2 {
-    
     backdrop-filter: blur(5px) brightness(0.5);
     align-self: flex-end;
     margin-bottom: 400px;
     color: #ffffff;
-
 }
 
 .got {
-    
     backdrop-filter: blur(3px);
     align-self: flex-end;
     margin-bottom: 100px;
@@ -131,7 +246,6 @@ html {
 }
 
 .wd2 {
-    
     backdrop-filter: blur(3px) brightness(0.6);
     align-self: flex-end;
     margin-bottom: 100px;
@@ -139,7 +253,6 @@ html {
 }
 
 .hd2 {
-    
     backdrop-filter: blur(3px) brightness(0.6);
     align-self: flex-end;
     margin-bottom: 150px;
@@ -152,32 +265,44 @@ html {
     margin-bottom: 400px;
     color: #ffffff;
 }
+
 .wt {
     backdrop-filter: blur(5px) brightness(0.7);
     align-self: flex-end;
     margin-bottom: 20px;
     color: #ffffff;
 }
+
 .ao {
     backdrop-filter: blur(5px) brightness(0.7);
     align-self: flex-end;
     margin-bottom: 80px;
     color: #ffffff;
 }
+
 .mr {
     backdrop-filter: blur(5px) brightness(0.45);
     align-self: flex-end;
     margin-bottom: 80px;
     color: #ffffff;
 }
-.sot{
+
+.sot {
     backdrop-filter: blur(5px) brightness(0.45);
     align-self: flex-end;
     margin-bottom: 80px;
     color: #ffffff;
 }
 
-/*-----------------------------*/
+.nms {
+    backdrop-filter: blur(5px) brightness(0.45);
+    align-self: flex-end;
+    margin-bottom: 400px;
+    color: #ffffff;
+}
+
+/*GAME LOGO IMAGES*/
+
 .rdr2img {
     width: 190%;
     height: auto;
@@ -207,32 +332,45 @@ html {
     height: auto;
     display: block;
 }
+
 .wtimg {
     width: 130%;
     height: auto;
     display: block;
 }
+
 .aoimg {
     width: 120%;
     height: auto;
     display: block;
 }
+
 .mrimg {
     width: 130%;
     height: auto;
     display: block;
 }
-.sotimg{
+
+.sotimg {
     width: 200%;
     height: auto;
     display: block;
 }
-/*-----------------------------*/
+
+.nmsimg {
+    width: 180%;
+    height: auto;
+    display: block;
+    align-items: center;
+}
+
 .gametitle img {
     width: 50%;
     height: auto;
     display: block;
 }
+
+/* GAME STATS & TEXT */
 
 h2 {
     font-size: 2.5rem;
@@ -252,8 +390,11 @@ h2 {
     font-size: 1rem;
 }
 
-/* Responsive for Mobile */
+
+
 @media (max-width: 768px) {
+
+    
     .game-section {
         justify-content: center;
     }
@@ -262,73 +403,67 @@ h2 {
         width: 80%;
         margin-right: 0;
     }
-}
 
-/* Intro Section Styles */
-.intro-section {
-    background: linear-gradient(-45deg, #0f0c29, #302b63, #24243e, #000000);
-    background-size: 400% 400%;
-    animation: gradientBG 15s ease infinite;
-    justify-content: center;
-    flex-direction: column;
-    text-align: center;
+    
+    .intro-content h1 {
+        font-size: 2rem;
+        letter-spacing: 4px;
+    }
 
-}
+    .bookmarks a {
+        font-size: 0.7rem;
+        padding: 8px 15px;
+        letter-spacing: 1px;
+    }
 
+    
+    .bookmarks a:nth-child(1) {
+        top: 10%;
+        left: 5%;
+    }
 
-.intro-content h1 {
-    font-size: 4rem;
-    margin-bottom: 50px;
-    background: linear-gradient(to right, #00d4ff, #00f35d, #ffb400, #d41936);
-    -webkit-background-clip: text;
-    background-clip: text;
-    /* Fixed lint: Standard property */
-    -webkit-text-fill-color: transparent;
-    color: transparent;
-    /* Fallback */
-    text-transform: uppercase;
-    letter-spacing: 5px;
-    animation: titleFloat 3s ease-in-out infinite alternate;
-    position: relative;
-    z-index: 5;
-}
+    .bookmarks a:nth-child(2) {
+        top: 18%;
+        right: 5%;
+    }
 
-.intro-section h1 {
-    font-size: 4rem;
-    margin-bottom: 50px;
-    background: wheat;
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    text-transform: uppercase;
-    letter-spacing: 5px;
-    position: relative;
-    z-index: 5;
-}
+    .bookmarks a:nth-child(3) {
+        top: 26%;
+        left: 5%;
+    }
 
+    .bookmarks a:nth-child(4) {
+        top: 34%;
+        right: 5%;
+    }
 
+    .bookmarks a:nth-child(5) {
+        top: 42%;
+        left: 5%;
+    }
 
-.bookmarks {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
+    .bookmarks a:nth-child(6) {
+        top: 58%;
+        right: 5%;
+    }
 
-.bookmarks a {
-    color: white;
-    text-decoration: none;
-    font-size: 1.5rem;
-    padding: 15px 30px;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    border-radius: 5px;
-    transition: all 0.3s ease;
-    background: rgba(255, 255, 255, 0.05);
-    backdrop-filter: blur(5px);
-}
+    .bookmarks a:nth-child(7) {
+        top: 66%;
+        left: 5%;
+    }
 
-.bookmarks a:hover {
-    background: rgba(255, 255, 255, 0.2);
-    transform: scale(1.05);
-    border-color: #00d4ff;
-    box-shadow: 0 0 15px rgba(0, 212, 255, 0.5);
+    .bookmarks a:nth-child(8) {
+        top: 74%;
+        right: 5%;
+    }
+
+    .bookmarks a:nth-child(9) {
+        top: 82%;
+        left: 5%;
+    }
+
+    .bookmarks a:nth-child(10) {
+        bottom: 5%;
+        right: 5%;
+    }
 }
