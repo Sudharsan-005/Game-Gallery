@@ -1,0 +1,62 @@
+/* Initial state for Scroll Animation */
+.info-card {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+/* Class added by JS when in view */
+.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Hover Effect */
+.info-card:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+    /* Faster transition for hover */
+}
+
+@keyframes borderPulse {
+    0% {
+        box-shadow: 0 0 10px var(--glow-color, rgba(255, 255, 255, 0));
+    }
+
+    100% {
+        box-shadow: 0 0 25px var(--glow-color, rgba(255, 255, 255, 0.5)), 0 0 10px var(--glow-color, rgba(255, 255, 255, 0.5));
+    }
+}
+
+/* Specific Card Glow Animations */
+.rdr2 {
+    --glow-color: #d41936;
+    animation: borderPulse 2s infinite alternate;
+}
+
+.got {
+    --glow-color: #d2c188;
+    animation: borderPulse 2s infinite alternate;
+}
+
+.wd2 {
+    --glow-color: #00f35d;
+    animation: borderPulse 2s infinite alternate;
+}
+
+.hd2 {
+    --glow-color: #ffb400;
+    animation: borderPulse 2s infinite alternate;
+}
+.r6s {
+    --glow-color: #0051ff;
+    animation: borderPulse 2s infinite alternate;
+}
+.wt {
+    --glow-color: #fd8b20;
+    animation: borderPulse 2s infinite alternate;
+}
+.ao {
+    --glow-color: #fd2020;
+    animation: borderPulse 2s infinite alternate;
+}
