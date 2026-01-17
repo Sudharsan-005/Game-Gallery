@@ -164,6 +164,19 @@ html {
     margin-bottom: 80px;
     color: #ffffff;
 }
+.mr {
+    backdrop-filter: blur(5px) brightness(0.45);
+    align-self: flex-end;
+    margin-bottom: 80px;
+    color: #ffffff;
+}
+.sot{
+    backdrop-filter: blur(5px) brightness(0.45);
+    align-self: flex-end;
+    margin-bottom: 80px;
+    color: #ffffff;
+}
+
 /*-----------------------------*/
 .rdr2img {
     width: 190%;
@@ -204,7 +217,16 @@ html {
     height: auto;
     display: block;
 }
-
+.mrimg {
+    width: 130%;
+    height: auto;
+    display: block;
+}
+.sotimg{
+    width: 200%;
+    height: auto;
+    display: block;
+}
 /*-----------------------------*/
 .gametitle img {
     width: 50%;

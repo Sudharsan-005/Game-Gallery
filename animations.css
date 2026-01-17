@@ -60,3 +60,11 @@
     --glow-color: #fd2020;
     animation: borderPulse 2s infinite alternate;
 }
+.mr {
+    --glow-color: #ed1a23;
+    animation: borderPulse 2s infinite alternate;
+}
+.sot{
+    --glow-color: #d2c188;
+    animation: borderPulse 2s infinite alternate;
+}
