@@ -1,5 +1,3 @@
-/* GLOBAL STYLES */
-
 body,
 html {
     margin: 0;
@@ -12,9 +10,6 @@ html {
     height: 100vh;
     scroll-behavior: smooth;
 }
-
-/* GAME SECTION - GENERAL CONTAINER*/
-
 .game-section {
     position: relative;
     height: 100vh;
@@ -23,17 +18,12 @@ html {
     overflow: hidden;
     scroll-snap-align: center;
 }
-
-/* INTRO SECTION*/
-
 .intro-section {
     justify-content: center;
     align-items: center;
     position: relative;
     background-color: #000;
 }
-
-/* Title container - centered */
 .intro-content {
     position: absolute;
     top: 55%;
@@ -42,7 +32,6 @@ html {
     z-index: 3;
     text-align: center;
 }
-
 .intro-content h1 {
     font-size: 3.5rem;
     font-weight: 700;
@@ -53,8 +42,6 @@ html {
     font-family: 'Courier New', monospace;
     margin-bottom: 500px;
 }
-
-/* Bookmarks/Navigation */
 .bookmarks {
     position: absolute;
     width: 100%;
@@ -63,7 +50,6 @@ html {
     left: 0;
     z-index: 2;
 }
-
 .bookmarks a {
     position: absolute;
     color: #fff;
@@ -79,72 +65,58 @@ html {
     font-family: 'Courier New', monospace;
     white-space: nowrap;
 }
-
-/* Scattered positions for each button */
 .bookmarks a:nth-child(1) {
     top: 8%;
     left: 5%;
 }
-
 .bookmarks a:nth-child(2) {
     top: 8%;
     right: 5%;
 }
-
 .bookmarks a:nth-child(3) {
     top: 25%;
     left: 3%;
 }
-
 .bookmarks a:nth-child(4) {
     top: 25%;
     right: 3%;
 }
-
 .bookmarks a:nth-child(5) {
     bottom: 25%;
     left: 3%;
 }
-
 .bookmarks a:nth-child(6) {
     bottom: 25%;
     right: 3%;
 }
-
 .bookmarks a:nth-child(7) {
     bottom: 8%;
     left: 5%;
 }
-
 .bookmarks a:nth-child(8) {
     bottom: 8%;
     right: 5%;
 }
-
 .bookmarks a:nth-child(9) {
     top: 50%;
     left: 2%;
     transform: translateY(-50%);
 }
-
 .bookmarks a:nth-child(10) {
     top: 50%;
     right: 2%;
     transform: translateY(-50%);
 }
-
 .bookmarks a:nth-child(11) {
     bottom: 8%;
     left: 50%;
     transform: translateX(-50%);
 }
-
 .bookmarks a:nth-child(12) {
     top: 8%;
     left: 50%;
     transform: translateX(-50%);
 }
-
 .bookmarks a:hover {
     background: rgba(255, 255, 255, 0.2);
     border-color: rgba(255, 255, 255, 1);
@@ -153,9 +125,6 @@ html {
 .bookmarks a:active {
     transform: scale(1.02);
 }
-
-/* CAROUSEL & BACKGROUND IMAGES */
-
 .carousel-container {
     position: absolute;
     top: 0;
@@ -164,7 +133,6 @@ html {
     height: 100%;
     z-index: 0;
 }
-
 .bg-image {
     position: absolute;
     top: 0;
@@ -177,18 +145,14 @@ html {
     opacity: 0;
     transition: opacity 0.6s ease-in-out;
 }
-
 .bg-image.active {
     opacity: 1;
 }
-
-/* Screenshot Tooltip */
 .screenshot-tooltip {
     position: absolute;
     bottom: 10px;
     left: 50%;
     transform: translateX(-50%);
-
     color: rgb(206, 206, 206);
     padding: 6px 12px;
     border-radius: 6px;
@@ -205,8 +169,6 @@ html {
 .screenshot-tooltip.show {
     opacity: 1;
 }
-
-/*CAROUSEL NAVIGATION BUTTONS */
 
 .carousel-btn {
     position: absolute;
@@ -244,8 +206,6 @@ html {
     left: 80px;
 }
 
-/* INFO CARDS - BASE STYLES */
-
 .info-card {
     width: 30%;
     min-width: auto;
@@ -264,8 +224,6 @@ html {
     margin-right: auto;
     margin-left: 5%;
 }
-
-/* GAME-SPECIFIC CARD STYLES*/
 
 .rdr2 {
     backdrop-filter: blur(5px) brightness(0.5);
@@ -351,9 +309,6 @@ html {
     color: #ae3431;
 }
 
-
-/*GAME LOGO IMAGES*/
-
 .rdr2img {
     width: 190%;
     height: auto;
@@ -433,7 +388,6 @@ html {
     display: block;
 }
 
-/* VIDEO PLAYER CONTROLS */
 .video-player {
     position: absolute;
     top: 0;
@@ -485,8 +439,6 @@ html {
     border-color: rgba(255, 255, 255, 1);
 }
 
-/* GAME STATS & TEXT */
-
 h2 {
     font-size: 2.5rem;
     margin-top: 0;
@@ -505,11 +457,7 @@ h2 {
     font-size: 1rem;
 }
 
-
-
 @media (max-width: 768px) {
-
-
     .game-section {
         justify-content: center;
     }
@@ -518,7 +466,6 @@ h2 {
         width: 80%;
         margin-right: 0;
     }
-
 
     .intro-content h1 {
         font-size: 2rem;
@@ -530,7 +477,6 @@ h2 {
         padding: 8px 15px;
         letter-spacing: 1px;
     }
-
 
     .bookmarks a:nth-child(1) {
         top: 10%;
